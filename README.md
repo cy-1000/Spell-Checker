@@ -5,7 +5,7 @@ Uses a hash table to check to see if word passed into the program is a valid wor
 
 example input:
 
-"<absolute-path-to-dictionary-file>" helli
+"'<absolute-path-to-dictionary-file>'" helli
 
 output: helli? did you mean: hello, hells
 
