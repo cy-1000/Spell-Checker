@@ -40,7 +40,7 @@ public class EC2_SpellChecker {
 		int counter = 0;
 		for (int i = 1; i < args.length; i++) {
 			if (!dict.lookup(args[i])) {
-				System.out.print(args[i] + ": ");
+				System.out.print(args[i] + "? did you mean: ");
 				char[] sarr = args[i].toCharArray(); // turn to array of chars
 				for (int j = 0; j < sarr.length; j++) {
 					for (int k = 0; k < alphabet.length; k++) {
@@ -48,6 +48,8 @@ public class EC2_SpellChecker {
 
 						sarr[j] = alphabet[k]; // try all combos with the kth element of the char array with the
 												// alphabet array
+						
+						
 						check = String.valueOf(sarr);
 						if (dict.lookup(check)) {
 							if (counter == 0) {
